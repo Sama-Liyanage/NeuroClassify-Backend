@@ -1,4 +1,4 @@
-import { IsArray, IsBoolean, IsString } from '@nestjs/class-validator';
+import { IsArray, IsBoolean, IsString ,IsOptional} from '@nestjs/class-validator';
 
 export class CreateReportDto {
     @IsString()
@@ -19,4 +19,11 @@ export class CreateReportDto {
     @IsBoolean()
     diagnosis?: string;
 
+    @IsOptional()
+    @IsString()
+    tumor_size?: string; 
+
+    @IsOptional()
+    @IsString()
+    tumor_location?: string; 
 }
