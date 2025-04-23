@@ -23,7 +23,9 @@ export class ReportsController {
   async create(
     @Body() createReportDto: CreateReportDto
   ) {
-    return this.reportsService.create(createReportDto);
+    console.log("*****************")
+    console.log(createReportDto)
+    return await this.reportsService.create(createReportDto);
   }
 
   @Get()
